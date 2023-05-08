@@ -9,7 +9,7 @@ export const updateArrOfObjState = (setter, model, index, prop, val) => {
   setter(_model);
 };
 
-//toggles an item in array
+
 export const arrayToggle = (arr, item) => {
   let idx = arr.indexOf(item);
   if (idx > -1) {
@@ -42,13 +42,7 @@ export const createFillableModel = (model) => {
   let fields = model.fields;
   for (let field in fields) {
     let fld = fields[field];
-    // let fieldModel = {
-    //     title: fld.title,
-    //     required: fld.required,
-    //     type: fld.type,
-    //     value: fld.type === "single-choice question" || fld.type === "multiple-choice question" ? [] : ""
-    // }
-    // fillableModel.push(fieldModel)
+    
     fillableModel.push({
       ...fld,
       value:
